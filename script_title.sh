@@ -6,6 +6,8 @@ whoami
 
 pwd
 
+docker ps
+
 sed -i "s/<title>.*<\/title>/<title>$1<\/title>/g" index.html
 
 docker-compose  up -d --build
