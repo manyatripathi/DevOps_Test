@@ -9,7 +9,7 @@ pipeline{
     }
     stage('Update Title'){
       steps{
-        sh "./script_title.sh ${Title}"
+        sh "./script_title.sh ${params.Title}"
       }
     }
   }
