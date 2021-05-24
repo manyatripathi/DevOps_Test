@@ -18,9 +18,9 @@ pipeline{
             always 
             { 
                 echo 'Email Notification!'
-                //mail to: 'manyatripathi02@gmail.com',
-                //subject: "Status of pipeline: ${currentBuild.fullDisplayName}",
-		//body: "Build: ${BUILD_NUMBER} has result ${currentBuild.result} \n Access using ${BUILD_URL} "
+                mail to: 'manyatripathi02@gmail.com',
+                subject: "Status of pipeline: ${currentBuild.fullDisplayName}",
+		body: "Build: ${BUILD_NUMBER} has result ${currentBuild.result} \n Access using ${BUILD_URL} "
             }
     }
     
