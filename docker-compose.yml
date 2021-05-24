@@ -1,4 +1,5 @@
 nginx:
   build: .
+  container_name: custom_nginx
   ports:
    - "8090:80"
