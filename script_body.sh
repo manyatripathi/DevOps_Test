@@ -24,6 +24,11 @@ cat > index.html <<EOL
 	</html>
 EOL
 
+if [ "$(docker ps -q -f name=custom_nginx)" ]; then
+  echo "Deleting existing container"
+  docker rm -f custom_nginx
+fi
+
 docker-compose  up -d --build
 
 echo "Succesfully updated body"
