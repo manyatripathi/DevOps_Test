@@ -2,11 +2,6 @@ pipeline{
   agent any
   parameters { string(name: 'Title', defaultValue: 'MyPage', description: '')}
   stages{
-    stage('Checkout'){
-      steps{
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/manyatripathi/DevOps_Test.git']]])
-      }
-    }
     stage('Update Title'){
       steps{
         sh "./script_title.sh ${params.Title}"
